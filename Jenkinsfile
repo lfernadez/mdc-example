@@ -1,18 +1,15 @@
 pipeline {
-  agent {
-    node {
-      label 'build'
+    agent {
+        docker {
+            image 'node:8-alpine' 
+            args '-p 3000:3000' 
+        }
     }
-
-  }
-  stages {
-    stage('Build') {
-      steps {
-        git(url: 'https://github.com/lfernadez/mdc-example.git', branch: 'master', poll: true, credentialsId: '9bd79aabb35f0d9d213c34e7d63ca81834035bd6', changelog: true)
-      }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
     }
-  }
-  environment {
-    dev = 'dev'
-  }
 }
