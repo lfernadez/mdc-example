@@ -1,0 +1,61 @@
+<mdc-drawer #temporary drawer='temporary' [fixedAdjustElement]="demoTemporaryContent" class="demo-drawer--custom">
+  <mdc-drawer-header>
+    <mdc-drawer-header-content>
+      <div class="row">
+        <div class="col-xs-4">
+          <img src="assets/img_avatar.png" class="avatar">
+        </div>
+        <div class="col-xs-9">
+          <div class="row user-info">
+            <div class="col-xs-12">
+              <span mdcBody2>Luis Fern&aacute;ndez</span>
+            </div>
+            <div class="col-xs-12">
+              <span mdcBody2>luis.nfsmw@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mdc-drawer-header-content>
+  </mdc-drawer-header>
+  <mdc-drawer-content>
+    <mdc-list-group>
+      <mdc-list>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>home</mdc-icon>Home
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>star</mdc-icon>Star
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>send</mdc-icon>Sent Mail
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>drafts</mdc-icon>Drafts
+        </mdc-list-item>
+        <mdc-list-divider></mdc-list-divider>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>email</mdc-icon>All Mail
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>delete</mdc-icon>Trash
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-icon mdc-list-item-graphic>report</mdc-icon>Spam
+        </mdc-list-item>
+      </mdc-list>
+    </mdc-list-group>
+  </mdc-drawer-content>
+</mdc-drawer>
+<div #demoTemporaryContent>
+
+  <mdc-app-bar #demoappbar [fixed]="true" [fixedAdjustElement]="mainContent">
+    <mdc-app-bar-row>
+      <mdc-app-bar-section align="start">
+        <mdc-icon mdc-toolbar-menu-icon material-icon (click)="temporary.open()">menu</mdc-icon>
+        <mdc-app-bar-title>Title</mdc-app-bar-title>
+      </mdc-app-bar-section>
+    </mdc-app-bar-row>
+  </mdc-app-bar>
+
+</div>
